@@ -8,8 +8,8 @@ is a dominant strategy, this means that always bidding the amount that you perso
 the item at is always the best strategy for you regardless of whether other players over or
 under bid. Such a property makes this a very nice and fair kind of auction to partake in
 as no one can gain an advantage over anyone else by employing a complex strategy. This also
-produces a very clean and simple pure nash equilbrium in which all players bid their valuations
-as since every players action is dominant then this must be a nash equilbrium as any other bid
+produces a very clean and simple pure nash equilibrium in which all players bid their valuations
+as since every players action is dominant then this must be a nash equilibrium as any other bid
 will give a payoff less than or equal to bidding the valuation.
 
 # Questions:
@@ -25,7 +25,7 @@ changes the outcome of the auction. The same is true if they decrease to below t
 - **Case 1 Change from lose to win by increasing:** For this to be the case the new bid must be
 greater than the current greatest bid. This current greatest bid must be greater than player i's
 evaluation therefore if player i's new bid is the new greatest bid then the paid price will be the
-old one reulting in a negative payoff thus being worse than bidding the valuation.
+old one resulting in a negative payoff thus being worse than bidding the valuation.
 
 - **Case 2 Change from win to lose by decreasing:** For this to happen the new bid must become a
 losing bid so at least one bid $b_j$ must now be greater than player i's new bid. Since player i's
@@ -40,4 +40,4 @@ increase their bid then they would still win the item at the same price of 0 so 
 If any other player were to increase their valuation then it is either stillless than player 1's bid
 and their payoff is still 0 so no improvement. Or their bid is greater than player 1's and since
 their valuation is higher than player 1's then they will have to pay more than their valuation and
-obtain a negative payoff which is a clearly worse than 0.
+obtain a negative payoff which is clearly worse than 0.
