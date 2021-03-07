@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage{multirow, graphicx, amsfonts, amsmath}
+
+\addtolength{\oddsidemargin}{-.875in}
+	\addtolength{\evensidemargin}{-.375in}
+	\addtolength{\textwidth}{1.55in}
+
+	\addtolength{\topmargin}{-.375in}
+	\addtolength{\textheight}{1.75in}
+
+\begin{document}
+
+\begin{center}
+	\LARGE{Algorithmic Game Theory Summative Assignment -- Individual Component}\\[0.1cm]
+	\Large{Dr Eleni Akrida}\\[0.1cm]
+	2021\\[0.5cm]
+\end{center}
+
+
+\noindent \textbf{You should submit a PDF file named SOLUTIONSXXXXXX for the Individual Component of the assignment, where XXXXXX is your CIS username in lowercase letters.}\\[0.1cm]
+
+\noindent\underline{Solve exercises 1 - 4.}\\
+Your answers should be either written using Latex (you may use the settings of the Latex file provided alongside this PDF file) and compiled into pdf (only the pdf should be handed in), or handwritten and scanned (in which case you should hand in the scanned pdf).\\[0.1cm]
+\textbf{Note 1: Make sure your answers are clear and detailed. Marks will be deducted if your answers are not clear or are missing key details / explanations.}\\
+\textbf{Note 2: In the case where you return a scanned copy of your handwritten notes, please make sure your writing is neat and clearly legible. Marks will be deducted if your answers are not neatly written.}\\[0.1cm]
+Note 3: Please remember that you should not share your work or make it available where others can find it as this can facilitate plagiarism and you can be penalised. This
+requirement applies until the assessment process is completed which does not happen until the exam board meets in June 2021.\\[0.8cm]
+
+
+
+\begin{enumerate}
+	
+	\item[\textbf{Exercise 1.}]   %%%%%%%  11 MARKS  %%%%%%% 
+	
+	Consider the following instance of the load balancing game where the number of tasks is equal to the number of machines, and in particular we have:
+	\begin{itemize}
+		\item $m$ identical machines $M_1, M_2, \dots, M_m$ (all of speed 1),
+		\item $m$ identical tasks $w_1 = w_2 = \dots = w_m = 1$.
+	\end{itemize}
+	Consider also the mixed strategy profile $A$ where each of the tasks is assigned to all machines equiprobably (i.e. with probability $1/m$). 
+	\begin{enumerate}
+		\item[(a)] Calculate the ratio $cost(A)/cost(OPT)$ in the special case where $m=2$.  \hfill{\bf [3 marks]}\smallskip
+		\item[(b)] Calculate the ratio $cost(A)/cost(OPT)$ in the special case where $m=3$.  \hfill{\bf [3 marks]}\smallskip
+		\item[(c)] Discuss what this ratio is for arbitrary $m$. What does this imply about the Price of Anarchy on identical machines for mixed Nash equilibria?  \hfill{\bf [5 marks]}\smallskip
+	\end{enumerate}
+	\vspace*{0.8cm}
+	
+
+	\item[\textbf{Exercise 2.}]  %%%%%%%  10 MARKS  %%%%%%% 
+
+	We consider a second-price sealed-bid auction where there are $n$ bidders who bid as follows:
+	\begin{itemize}
+		\item Bidders 1 up to $n-1$ bid either 1 dollar or $r > 1$ dollars equiprobably and
+		independently of the rest.
+		\item Bidder $n$ bids $h$ dollars, where $h > r$.
+	\end{itemize}
+	The seller's expected revenue $R$ is the expectation of the second highest value. 
+	\begin{itemize}
+		\item[(a)] What is the value that $R$ is approaching when $n$ is very large? \hfill{\bf [1 marks]}\smallskip
+		\item[(b)] Justify your answer by taking the limit. \hfill{\bf [9 marks]}\smallskip
+	\end{itemize}
+
+	\newpage
+
+
+
+
+	\item[\textbf{Exercise 3.}]   %%%%%%%  15 MARKS  %%%%%%% 
+
+Mary and Alice are buying items for Sunday lunch. Mary buys either chicken $(C)$ or beef $(B)$ for the main course and Alice buys either juice $(J)$ 
+or wine $(W)$. Both people prefer wine with beef and juice with chicken. The opposite alternatives are equally displeasing.
+However, Mary prefers beef over chicken, while Alice prefers chicken over beef.
+
+We assume that Mary buys first and then tells Alice what she bought,
+so when Alice makes her decision, she knows if the main course is beef or chicken.
+
+\begin{enumerate}
+\item[(a)] Express the above preferences as payoffs by using numbers\\(e.g.
+ $u_M(B,W) = 2$, $u_A(B,W) = \ldots$  etc.)               \hfill{\bf [2 marks]}\smallskip
+\item[(b)] Write down a bimatrix game with Mary as the row player 
+and Alice as the column player, using your chosen payoffs.           \hfill{\bf [4 marks]}\smallskip
+\item[(c)] Write down a game tree representing this game as an extended game.  \hfill{\bf [4 marks]}\smallskip
+\item[(d)] Find a solution for the extended game using backward induction.\\Describe your steps.  \hfill{\bf [5 marks]}\smallskip
+\end{enumerate}
+	\vspace*{0.8cm}
+
+
+	
+	\item[\textbf{Exercise 4.}]  %%%%%%%  12 MARKS  %%%%%%% 
+	
+	We consider a (matching) market of $k$ sellers and $k$ buyers, where $k$ is an integer, $k>0$. 
+	Each seller sells an item and the prices of the items are initially all zero. Buyer $i$ has valuation $k-i+1$ for the first item and valuation $0$ for every other item, as shown in the following diagram.
+	
+	\vspace*{0.5cm}
+	\begin{tabular}{c r c c c}
+		Buyers & \multicolumn{4}{c}{Valuations (for items $1$ to $k$)} \\
+		\hline
+		$x_1$ & $k,$ & $0,$ & $\ldots,$ & $0$ \\
+		$x_2$ & $k-1,$ & $0,$ & $\ldots,$ & $0$ \\
+		$\vdots$ & & & $\vdots$ \\
+		$x_k$ & $1,$ & $0,$ & $\ldots,$ & $0$ \\
+	\end{tabular}
+	
+	\noindent The sellers find the market-clearing prices using the procedure discussed in the lectures.
+	\begin{enumerate}
+		\item[(a)] What are the prices of the sellers' items ($1^{st}$ item, $2^{nd}$ item, \ldots, $k^{th}$ item) when the market clears? Which buyer gets the $1^{st}$ item and at what price?  \hfill{\bf [3 marks]}\smallskip
+		\item[(b)] Justify your answers to (a).  \hfill{\bf [6 marks]}\smallskip
+		\item[(c)] Which kind of auction does the construction of market-clearing prices procedure implement in this case?  \hfill{\bf [3 marks]}\smallskip
+	\end{enumerate}	
+
+\end{enumerate}
+\end{document}
