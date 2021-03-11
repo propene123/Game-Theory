@@ -1,0 +1,23 @@
+\documentclass[]{article}
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.8in]{geometry}
+\usepackage{commath,amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage[hidelinks]{hyperref}
+
+%uncomment below line to use reference file
+%\addbibresource{references.bib}
+
+%opening
+
+\begin{document}
+The first result shown in (P2) is that a symmetric network potential game has a pure Nash equilibrium that can be found in polynomial time. This is done by reducing the network $N$ representing the game to an instance of \textsc{MIN-COST FLOW} by replacing all edges in $N$ with a set of parallel edges each with capacity 1 and costs given by the corresponding delay function for that edge (resource). It follows simply that any integer solution to this problem minimizes the potential function $\phi(s)$ of $N$ (P2). Next it is shown that finding pure Nash equilibria of all other types of congestion game is \textbf{PLS}-complete. First it is proven for general congestion games by reducing a known \textbf{PLS}-complete problem \textsc{POSNAE3FLIP} (CITE) to a general congestion game. Each 3-clause in an instance of \textsc{POSNAE3FLIP} can be represented as 2 resources, with no delay or delay equal to their weight if there are more than 2 players (variables in the formula). Each player has 2 strategies one contains all the first resource for clauses containing the player and the second contains all the second resource for those clauses. It is easy to see that a Nash equilibrium in such a game is an optimum of \textsc{POSNAE3FLIP}. Symmetric games are easily proven by reducing a non-symmetric game to one. This is done by adding a new resource to all states in each action set in the game. These new resources have delay functions such that $d_e(j)$ is a very large integer for all $j>1$ and $0$ otherwise. Any equilibrium to such a game must involve a player using one of these new action sets as a strategy. Due to the choice of delay function for the new resources it is obvious that such an equilibrium when the new resources are removed from the strategy is simply the same as an equilibrium in the original game.
+
+
+%uncomment below line to print bilbliography
+%\printbibliography
+\end{document}
