@@ -12,6 +12,14 @@ produces a very clean and simple pure nash equilibrium in which all players bid 
 as since every players action is dominant then this must be a nash equilibrium as any other bid
 will give a payoff less than or equal to bidding the valuation.
 
+# Use In The Real World:
+Vickrey Auctions are quite rare in the real world, the notable examples are E-Bay using a
+slightly modified Vickrey Auction, and an extended version called a Vickrey-Clarke-Groves auction
+being used in some network routing algorithms in order to model the opportunity cost of using
+certain nodes. Some reasons Vickrey Auctions being rarely used are presented in "Why are Vickrey
+Auctions so rare?" (Rothkopf, Teisberg and Kahn, 1990), a major one being bidders being suspicious
+that the sealed bids may be tampered with by the auctioneer to engineer higher profits.
+
 # Questions:
 
 ## **Could you expand on why truthulness is a dominant strategy and a nash equilibrium**
