@@ -85,15 +85,34 @@ so $R=E[\max(B')] = r$
 				child{node[]{0, 0}
 				edge from parent node[left]{J}} 
 				child{node[]{2, 1}
-				edge from parent node[left]{W}}
+				edge from parent node[right]{W}}
 		edge from parent node[left]{B} }
 		child{node[filled,label=left:A]{}[sibling distance=5em]
 				child{node[]{1, 2}
 				edge from parent node[left]{J}}
 				child{node[]{0, 0}
-				edge from parent node[left]{W}}
+				edge from parent node[right]{W}}
 		edge from parent node[right]{C}};
 	\end{tikzpicture}
+	\item
+	$\text{Solution}=(B,W)$\\
+	Using backwards induction first we consider the subgames of length $1$, starting with the subgame following $B$. In this game Alice's optimal choice is $W$ giving a payoff of $1>0$. Next we consider the subgame following $C$. In this game Alice's optimal choice is $J$ giving a payoff of $2>0$. Now both subgames of length $1$ have been studied we can study the subgames of length $2$ of which there is only $1$ the full game. Given the optimal actions in the subgames of $1$  Mary choosing $B$ would yield her a payoff of $2$ and choosing $C$would yield a payoff of $1$, therefore Mary's optimal action is choosing $B$. No subgames exist of length $3$ therefore we are done producing the strategy pair $(B,WJ)$ and solution of $(B,W)$.
+\end{enumerate}
+\section*{Exercise 4}
+\begin{enumerate}
+	\item
+	Item $1$ has final price of $k-1$ all other items $\{2,...,k\}$ have prices of $0$. Buyer $x_i$ buys item $1$ at a price of $k-1$ for a payoff of $k-(k-1)=1$.
+	\item
+	\begin{itemize}
+		\item
+		For all items indexed $i\in [2,k]$ the payoff for $x_i$ will always be 0 as the valuation is $0$ and so is the asking price.
+		\item
+		So long as $>1$ buyer $x_i$ has a $>0$ payoff from item $1$ there will be a constricted set $S$ with $N(S)=\{1\}$ as all other items will give payoff of 0 rather than $>0$ from item $1$. This results in the asking price of item $1$ being increased by $1$.
+		\item
+		As there are $k$ buyers with valuations for item $1$ of $k-i+1$ the maximum valuation is $x_i$ with $k$ and the second highest is $x_2$ with $k-1$. So by the time item $1$'s price has increased to $k-2$ all other buyers have either a negative payoff from item $1$ or $0$ in the case of $x_3$. Therefore all $x_i\notin \{x_1,x_2\}$ can be assigned to an item $\neq1$, of which there must be enough as there are $k-1$ such items and $k-2$ buyers $\notin \{x_1,x_2\}$. Now item $1$ increases its price to $k-1$ as $x_1$ and $x_2$ still form a constricted set $S$. After this increase $x_2$'s payoff is now $0$, so can be assigned to an item $\neq1$. Now there is no longer a constricted set $S$ so the final price of item $1$ is $k-1$ and all other items are $0$.
+	\end{itemize}
+	\item
+	In this case the construction of market clearing prices models a second-price sealed-bid auction.
 \end{enumerate}
 %uncomment below line to print bilbliography
 %\printbibliography
