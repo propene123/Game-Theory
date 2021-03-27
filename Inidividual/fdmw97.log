@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.3)  27 MAR 2021 02:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.3)  27 MAR 2021 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,28 +907,28 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (6.13739pt too wide) in paragraph at lines 71--71
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (6.13739pt too wide) in paragraph at lines 112--112
 []|\T1/cmr/m/n/10 Mary|  
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./fdmw97.aux)
+[2] [3] (./fdmw97.aux)
 Package rerunfilecheck Info: File `fdmw97.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'fdmw97.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 24419 strings out of 479383
- 458937 string characters out of 5875831
- 1177939 words of memory out of 5000000
+ 24422 strings out of 479383
+ 458957 string characters out of 5875831
+ 1178940 words of memory out of 5000000
  41107 multiletter control sequences out of 15000+600000
  416929 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,11n,85p,793b,1076s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
-texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/font
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
+exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
@@ -940,10 +940,10 @@ usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-su
 per/sfti1200.pfb>
-Output written on fdmw97.pdf (2 pages, 158913 bytes).
+Output written on fdmw97.pdf (3 pages, 166564 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

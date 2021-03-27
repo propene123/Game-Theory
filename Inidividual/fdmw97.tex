@@ -27,6 +27,47 @@
 \maketitle
 
 \section*{Exercise 1}
+\begin{enumerate}
+	\item ~
+	\begin{itemize}
+		\item
+		We have $2$ machines $M_1, M_2$ with speeds $S_1=S_2=1$ and $2$ tasks $1,2$ with weights $w_1=w_2=1$.
+		\item
+		Let $C:[2]\rightarrow[2]$ be an assignment of task $i$ to a machine $M_j$. We have strategy profile $A$ let $A_i^j=P(C(i)=M_j)$ i.e. the probability task $i$ is assigned to machine $M_j$.
+		\item
+		It is trivial to see that under these definitions $cost(OPT)=1$ as we assign each task to its own machine giving a makespan of $1$ any other assignment would have $>1$ task on one of the machines resulting in $\max\limits_{j\in[2]}(l_j)>1$ in this particular case $2$.
+		\item
+		$cost(A)=E[cost(C)]$ i.e. the cost of $A$ is equal to the random assignment $C$ under $A$.
+		\item
+		$cost(C)\in\{1,2\}$ i.e. $cost(C)$ is a random variable.
+		\item
+		There are $2^2=4$ different possible assignments, 2 with a makespan of 1 and 2 with a makespan of 2. Therefore:
+		\begin{align*}
+						E[cost(C)]&=\frac{2}{4}\times1+\frac{2}{4}\times2=1.5 \\
+						\frac{cost(A)}{cost(OPT)}&=\frac{1.5}{1}=1.5
+		\end{align*}
+	\end{itemize}
+	\item~
+	\begin{itemize}
+		\item
+		We have 3 machines $M_1,M_2,M_3$ with speeds $S_1=S_2=S_3=1$ and $3$ tasks $1,2,3$ with weights $w_1=w_2=w_3=1$.
+		\item
+		Let $C:[3]\rightarrow[3]$ be an assignment of task $i$ to a machine $M_j$. We have strategy profile $A$ let $A_i^j=P(C(i)=M_j)$ i.e. the probability task $i$ is assigned to machine $M_j$.
+		\item
+		It is trivial to see that under these definitions $cost(OPT)=1$ as we assign each task $i$ to its own machine $M_j$ giving a makespan of $1$, as any other assignment would have $>1$ task on one machine resulting in $\max\limits_{j\in[2]}(l_j)>1$ in this case either $2$ or $3$.
+		\item
+		$cost(A)=E[cost(C)]$ i.e. the cost of $A$ is equal to the random assignment of $C$ under strategy profile $A$.
+		\item
+		$cost(C)$ is a random variable such that $cost(C)\in\{1,2,3\}$
+		\item
+		There are $3^3=27$ different possible assignments, $6$ with a makespan of $1$, $18$ with a makespan of $2$, and $4$ with a makespan of $3$. Therefore:
+		\begin{align*}
+			E[cost(C)]&=\frac{1}{27}(6\times1+18\times2+3\times3)=\frac{17}{9} \\
+			\frac{cost(A)}{cost(OPT)}&=\frac{\frac{17}{9}}{1}=\frac{17}{9}=1.\dot{8}
+		\end{align*}
+	\end{itemize}
+\end{enumerate}
+
 \section*{Exercise 2}
 \begin{enumerate}
 	\item When $n$ is very large $R$ is approaching $r$
