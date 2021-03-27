@@ -9,13 +9,13 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{tikz}
-\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage[backend=biber, sorting=none, style=ieee, citestyle=ieee]{biblatex}
 \usepackage[hidelinks]{hyperref}
 
 \renewcommand{\theenumi}{\alph{enumi})}
 
 %uncomment below line to use reference file
-%\addbibresource{references.bib}
+\addbibresource{references.bib}
 
 %opening
 \title{Individual Exercises}
@@ -33,7 +33,7 @@
 		\item
 		We have $2$ machines $M_1, M_2$ with speeds $S_1=S_2=1$ and $2$ tasks $1,2$ with weights $w_1=w_2=1$.
 		\item
-		Let $C:[2]\rightarrow[2]$ be an assignment of task $i$ to a machine $M_j$. We have strategy profile $A$ let $A_i^j=P(C(i)=M_j)$ i.e. the probability task $i$ is assigned to machine $M_j$.
+		Let $C:[2]\rightarrow[2]$ be an assignment of task $i$ to a machine $M_j$. We have strategy profile $A$ let $A_i^j=P(C(i)=M_j)$ i.e. the probability task $i$ is assigned to machine $M_j$. For all $i,j \in[2]$ $A_i^j=\frac{1}{2}$
 		\item
 		It is trivial to see that under these definitions $cost(OPT)=1$ as we assign each task to its own machine giving a makespan of $1$ any other assignment would have $>1$ task on one of the machines resulting in $\max\limits_{j\in[2]}(l_j)>1$ in this particular case $2$.
 		\item
@@ -52,7 +52,7 @@
 		\item
 		We have 3 machines $M_1,M_2,M_3$ with speeds $S_1=S_2=S_3=1$ and $3$ tasks $1,2,3$ with weights $w_1=w_2=w_3=1$.
 		\item
-		Let $C:[3]\rightarrow[3]$ be an assignment of task $i$ to a machine $M_j$. We have strategy profile $A$ let $A_i^j=P(C(i)=M_j)$ i.e. the probability task $i$ is assigned to machine $M_j$.
+		Let $C:[3]\rightarrow[3]$ be an assignment of task $i$ to a machine $M_j$. We have strategy profile $A$ let $A_i^j=P(C(i)=M_j)$ i.e. the probability task $i$ is assigned to machine $M_j$. For all $i,j\in[3]$ $A_i^j=\frac{1}{3}$
 		\item
 		It is trivial to see that under these definitions $cost(OPT)=1$ as we assign each task $i$ to its own machine $M_j$ giving a makespan of $1$, as any other assignment would have $>1$ task on one machine resulting in $\max\limits_{j\in[2]}(l_j)>1$ in this case either $2$ or $3$.
 		\item
@@ -65,6 +65,35 @@
 			E[cost(C)]&=\frac{1}{27}(6\times1+18\times2+3\times3)=\frac{17}{9} \\
 			\frac{cost(A)}{cost(OPT)}&=\frac{\frac{17}{9}}{1}=\frac{17}{9}=1.\dot{8}
 		\end{align*}
+	\end{itemize}
+	\item ~
+	\begin{itemize}
+		\item
+		For an arbitrary $m$ we have machines $M_j$ where $j\in[m]$ and speeds $S_j=1$ where $j\in[m]$. We also have tasks $i\in[m]$ with weights $w_i=1$.
+		\item
+		Let $C:[m]\rightarrow[m]$ be an assignment of task $i$ to machine $M_j$. Our strategy profile $A$ assigns a task $i$ to each machine equiprobably so let $A_i^j=P(C(i)=M_j)$ i.e. the probability that task $i$ is assigned to machine $M_j$. For all $i,j\in[m]$ $A_i^j=\frac{1}{m}$
+		\item
+		$E[l_j]=\sum_{i=1}^{m}w_iA_i^j=\sum_{i=1}^{m}1\times\frac{1}{m}=m\cdot\frac{1}{m}=1$
+		\item
+		Since all machines are identical and all tasks are identical $\forall i \forall j \in[m]$
+		\[
+			c_i^j=E[l_j]+(1-A_i^j)w_i=1+\frac{m-1}{m}\cdot1=\frac{2m-1}{m}
+		\]
+		As this is the same for all tasks and machines under $A$, $A$ must be a Nash Equilibrium.
+		\item
+		Once again $cost(OPT)$ is trivially $1$, as each task can be assigned to an individual machine giving a makespan of $1$, since the number of tasks and machines is equal any other assignment would have at least $1$ machine with more than $1$ task assigned to it giving a makespan $>1$.
+		\item
+		$cost(A)=E[cost(C)]$ i.e. the cost of $A$ is equal to the random assignment of $C$ under $A$.
+		\item
+		As all weights $w_i=1$ $E[cost(C)]$ is analogous to the expected maximum load of a balls-and-bins problem .
+		\item
+		When the number of balls and bins are equal like in this case and the balls are uniformly distributed as they are under $A$ and $cost(OPT)=1$ then:
+		\[
+			cost(A)=\Theta\left(\frac{\log m}{\log\log m}\right)
+		\]
+		As shown in \cite{b1}.
+		\item
+		This implies that as the number of machines and tasks increases, so does the Price of Anarchy on identical machines for mixed Nash Equilibria -- in a sub-logarithmic manner.
 	\end{itemize}
 \end{enumerate}
 
@@ -156,5 +185,5 @@ so $R=E[\max(B')] = r$
 	In this case the construction of market clearing prices models a second-price sealed-bid auction.
 \end{enumerate}
 %uncomment below line to print bilbliography
-%\printbibliography
+\printbibliography
 \end{document}
