@@ -72,6 +72,28 @@ so $R=E[\max(B')] = r$
 		& B & $(2,1)$ & $(0,0)$
 	\end{tabular}
 	\item
+	~\\
+	\begin{tikzpicture}[
+		round/.style={circle,draw,minimum size=1pt},
+		filled/.style={circle, draw, fill=black, minimum size=1pt},
+		sibling distance        = 10em,
+		level distance          = 5em,
+		every node/.style       = {font=\footnotesize}
+		]
+		\node[round,label=above:M]{}
+		child{node[filled,label=left:A]{}[sibling distance=5em]
+				child{node[]{0, 0}
+				edge from parent node[left]{J}} 
+				child{node[]{2, 1}
+				edge from parent node[left]{W}}
+		edge from parent node[left]{B} }
+		child{node[filled,label=left:A]{}[sibling distance=5em]
+				child{node[]{1, 2}
+				edge from parent node[left]{J}}
+				child{node[]{0, 0}
+				edge from parent node[left]{W}}
+		edge from parent node[right]{C}};
+	\end{tikzpicture}
 \end{enumerate}
 %uncomment below line to print bilbliography
 %\printbibliography
